@@ -247,13 +247,26 @@ void menue2() {
 }
 
 int main() {
-    // test if installed or not
-    system("cd /usr/local/bin");
-    
-    if (!(access(name, EXEC))) {
-        menue1();
+    printf("%s installer\n", name);
+    if(access(path, F_OK) != -1)
+    {
+        printf("It seems like %s is already installed in %s.\nDo you want to update or uninstall?\n", name, path);
+        puts("1. Update\n2. Uninstall");
+        switch(atoi(getch()))
+        {
+            case 1:
+                {
+                    puts("Updating...");
+                }
+            case 2:
+                {
+                    puts("Uninstalling...");
+                }
+        }
     }
-    else {
-        menue2();
+    else
+    {
+        printf("Installing %s\n This requires an internet connection.\n", name);
+        //libgit stuff here
     }
 }
