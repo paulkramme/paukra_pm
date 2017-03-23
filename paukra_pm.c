@@ -15,53 +15,6 @@ const char folder[] = "btsoot";
 const char repo[] = "github.com/paulkramme/btsoot";
 const char learn_more[] = "git.paukra.com/open-source/btsoot";
 
-/*
-void language_c() {
-    // install if program is in c (needs makefile)
-    system("apt-get install build-essential");
-    
-    snprintf(command, 255, "make %s", name);
-    system(command);
-    memset(command, 0, 255);
-    
-    snprintf(command, 255, "cp %s /usr/local/bin", name);
-    system(command);
-    memset(command, 0, 255);
-    
-    printf("language == c");
-}
-
-language_py() {
-    // install if program is in python
-    
-    snprintf(command, 255, "mv $name.py %s", name);
-    system(command);
-    memset(command, 0, 255);
-    
-    snprintf(command, 255, "cp %s /usr/local/bin", name);
-    system(command);
-    memset(command, 0, 255);
-    
-    printf("language == py");
-}
-
-test_language() {
-    # identify right language
-    if (access(name.c, F_OK)
-    cd /etc/$folder
-    
-    if [ -e $name.c ]
-        then
-            language_c
-        elif [ -x $name ] || [ -x $name.py ]
-            then
-                language_py
-        else
-            echo "ERROR: no valid language or no main program" >> $log
-    fi
-}
-*/
-
 int main();
 
 void install_exec() {
@@ -182,28 +135,6 @@ void uninstall() {
     scanf("%c", &enter);
     main();
 }
-
-/*
-test_installation() {
-    // what is installed and what not?
-    if [ -x /usr/local/bin/$name ] && [ -d /etc/$folder ]
-        then
-            echo "$folder (folder) and $name (exec/file) are existing:"
-            echo "$name installed"
-        elif [ -x /usr/local/bin/$name ]
-            then
-                echo "only $name (exec/file) is existing"
-        elif [ -d /etc/$folder ]
-            then
-                echo "only $folder (folder) is existing"
-        else
-            echo "$folder (folder) and $name (exec/file) are NOT existing:"
-            echo "$name not installed"
-    fi
-    read -p "press ENTER to continue" 
-    main
-}
-*/
 
 void learn_more2() {
     // link to website for more information
